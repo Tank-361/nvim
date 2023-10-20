@@ -19,12 +19,11 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup({
-  "folke/which-key.nvim",
-  { "folke/neoconf.nvim", cmd = "Neoconf" },
-  "folke/neodev.nvim",
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  "catppuccin/nvim",
+  "nvim-lua/plenary.nvim",
+  "nvim-telescope/telescope.nvim",
 })
 
 vim.cmd.colorscheme "catppuccin-mocha"
-vim.cmd.set("rnu")
+vim.cmd.set("nu rnu")
 
